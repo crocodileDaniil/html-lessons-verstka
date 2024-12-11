@@ -121,10 +121,13 @@ img
 				list-style-type: none
 				>li
 					display: inline-block
-					margin-right: 40px
+					position: relative
+					
 					>a
 						display: block
 						text-decoration: none
+						padding: 5px 40px 5px 0px
+						padding-right: 40px
 						// font-size: 14px
 						font-weight: 500
 						color: #000
@@ -132,6 +135,48 @@ img
 						// или >a:hover
 						&:hover
 							color: $accent
+					>.sub_menu
+						position: absolute
+						top:35px
+						background-color: #fff
+						box-shadow: 0 3px 6px rgba(0,0 ,0 ,0.16 )
+						z-index: 10
+						border-radius: 5px
+						padding: 5px 0
+						// можно так(5 урок), но появлется меню при наведии в близ области
+						// opacity: 0
+						// transition: opacity 0.4s ease
+						animation: opac 0.6s 
+						// особенность, нужно подгонять паддингами, чтобы не было зазора между элементов открывающим
+						// и открывающимся
+						display: none
+						>li
+							display: block
+							>a
+								padding: 3px 10px
+								font-size: 14px
+					&.has_sub_menu
+						&:hover >.sub_menu
+							display: block
+						&::after
+							content: ""
+							display: block
+							width: 8px
+							height: 4px
+							background-image: url('/src/img/arrow_down.svg')
+							background-repeat: no-repeat
+							background-position: center
+							position: absolute
+							top: 17px
+							right: 25px 
+						
+				
+@keyframes opac
+	from 
+		opacity: 0
+	to
+		opacity: 1
+
 
 .notif
 	background-color: $light_accent
@@ -160,12 +205,12 @@ img
 	padding-bottom: 200px
 	// height: 98vh
 	.mb_info
-		// в уроке без flex на margin всё
+		// в уроке без flex на margin всё (5 урок, ниже подпишу как в нем)
 		display: flex
 		flex-direction: column
-		gap: 24px
 		justify-content: space-between
 		align-items: flex-start
+		gap: 24px
 		max-width: 472px
 		>h1
 			color: #000000
@@ -177,8 +222,11 @@ img
 			color: #797c80
 			font-size: 18px
 			text-shadow: 0px 5px 6px rgba(0, 0, 0, 0.2)
+			// так в уроке (5)
+			// margin: 14px 0 44px
 		>.btns
 			display: flex
 			align-items: center
+			// в уроке нет контент и gap (5)
 			gap: 16px
-			justify-content: center
+			justify-content: center 

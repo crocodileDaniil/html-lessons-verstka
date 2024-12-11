@@ -33,7 +33,10 @@ gulp.task("sass", function () {
 
 // Копирование HTML-файлов в папку dist
 gulp.task("copy-html", function () {
-  return gulp.src(paths.html).pipe(gulp.dest("dist"));
+  return gulp
+    .src(paths.html)
+    .pipe(gulp.dest("dist"))
+    .on("end", () => console.log("HTML файлы успешно скопированы в dist"));
 });
 
 // Задача для отслеживания изменений
@@ -48,10 +51,11 @@ gulp.task("watch", function () {
 gulp.task("serve", function () {
   browserSync.init({
     server: "./dist",
-    host: "192.168.0.107", // Указывает слушать все адреса
-    port: 6000, // Выберите любой свободный порт
+    // host: "192.168.0.107", // Указывает слушать все адреса
+    port: 5300, // Выберите любой свободный порт
     open: false, // Отключает автоматическое открытие браузера
     notify: false,
+    logLevel: "debug",
   });
 
   console.log("Server started at http://localhost:6000");
