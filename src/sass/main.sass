@@ -179,6 +179,7 @@ img
 
 
 .notif
+	max-width: max-content
 	background-color: $light_accent
 	border-radius: 20px
 	padding: 8px 16px
@@ -241,14 +242,22 @@ img
 		align-items: center
 		justify-content: space-between
 		max-width: 963px
+		>.notif
+			>img
+				width: 26px
+				height: auto
+				margin-right: 7px
+
 		>h2
 			margin: 0 107px
 			font-size: 35px
 			text-align: center
+			color: $dark_accent
 		>.description
-			color: #8989A2
+			color: $gray_accent
 			font-size: 18px
 			margin: 0 145px
+			margin: auto  
 			text-align: center
 		.row_adv
 			display: flex
@@ -270,7 +279,50 @@ img
 					font: size 16px
 					font-weight: 700
 					text-align: center
+					color: $dark_accent
 				>.descr
-					color: #8989A2
+					color: $gray_accent
 					text-align: center
 					font-size: 16px
+
+section
+	padding: 80px 0
+	&#top_banner
+		padding: 0
+
+// как в уроке
+// #advantages
+// 	.notif
+// 		margin: 0 auto
+		
+// 		img
+// 			width: 26px
+// 			height: auto
+// 			margin-right: 7px
+// 	.heading_main
+// 		max-width: 500px
+// 		margin: 32px auto 48px
+// 	h2
+// 		font-size: 36px
+// 		font-weight: 700
+// 		text-align: center
+// 		color: $dark_accent
+// 		line-height: 1.4
+// 		padding-bottom: 10px 
+// 	.description
+// 		color: $gray_accent
+// 		margin-bottom: 48px
+// 		text-align: center
+// 	.row_adv
+// 		.item_adv
+// 			>img
+// 				width: 48px
+// 				height: 40px
+// 				border-radius: 50% 
+// 			>.heading
+// 				font-size: 24px
+// 				color: $dark_accent
+// 				margin: 24px 0 16px
+// 			>.descr
+// 				color: $gray_accent
+
