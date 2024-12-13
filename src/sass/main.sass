@@ -234,6 +234,8 @@ img
 
 	// моя верстка 7го задания.
 #advantages
+	>.container
+		text-align: center
 	margin-top: 112px
 	.inner_advantages
 		display: flex
@@ -242,6 +244,7 @@ img
 		align-items: center
 		justify-content: space-between
 		max-width: 963px
+		margin: 0 auto
 		>.notif
 			>img
 				width: 26px
@@ -290,6 +293,68 @@ section
 	&#top_banner
 		padding: 0
 
+.info_1_inner
+	display: flex
+	justify-content: space-between
+	align-items: center
+	gap: 88px
+	max-width: 975px
+	margin-left: auto
+	margin-right: auto
+	.info_1_team
+		>img
+			max-width: 413px
+			height: auto
+	.team_desc
+		display: flex
+		flex-direction: column
+		gap:24px
+		justify-content: space-around
+		align-items: flex-start
+		h2
+			color:$dark_accent
+			font-size: 32px
+			font-weight: 700
+		.desc
+			color: $gray_accent
+			font-size: 16px
+		.notif
+			>img
+				width: 24px
+				height: 24px
+
+
+.info_2_inner
+	display: flex
+	justify-content: space-between
+	align-items: center
+	max-width: 1100px
+	margin-left: auto
+	position: relative
+	left: 50px
+	.engineers_desc
+		position: relative
+		
+		width: 500px
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		align-items: flex-start
+		gap:24px	
+		h2
+			color: $dark_accent
+			font-size: 32px
+			font-weight: 700
+			line-height: 1.2
+		.desc
+			color: $gray_accent
+			font-size: 16px
+
+	.engineers_img
+		>img
+			max-width: 680px
+			height: auto
+			
 // как в уроке
 // #advantages
 // 	.notif
