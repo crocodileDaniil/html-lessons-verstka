@@ -13,8 +13,14 @@ $(function () {
 
   /* Reviews tabs */
 
-  $(".companies > img").click(function () {
+  $(".companies > img").click(function() {
     const revId = $(this).data("revid");
-    console.log("revId");
+		$(".companies > img").not(this).removeClass('active')
+		$(this).addClass('active')
+
+		$(".rew_inner > .item_rev").not(revId).removeClass('active')
+		$(revId).addClass('active')
+
+    // console.log(revId);
   });
 });

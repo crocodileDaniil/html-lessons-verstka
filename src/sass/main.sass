@@ -423,7 +423,52 @@ section
 					transform: scale(1.15)
 
 
+#pre_footer
+	.pf_info
+		width: 50% // нужно пока не появился 2ой блок справа
+		>h4
+			color: $dark_accent
+			line-height: 1.2
+			font-size: 36px
+			text-align: left
+			font-weight: 900
+		>img
+			margin: 42px auto
+			// можно с помощью псевдо контейнера и с помощью JS получать размеры вложенного 
+			//	и изменять смещение относительно него
+		// .pf_trusted
+		// 	text-align: center
+		// .trust
+		// 	text-align: center
+		// 	position: relative
+		// 	display: inline-block
+		// 	// width: 100%
+		// .trust::before,.trust::after
+		// 	content: ''
+		// 	background-color: red
+		// 	position: absolute
+		// 	height: 1px
+		// 	top: 50%
+		// 	width: 50% 
+		// 	transform: translateY(-50%)
+		// 	// transform: translateY(-50%)
+		// .trust::before	
+		// 	right: 103% 
+		// .trust::after
+		// 	left: 103%
 
+
+		>.pf_images
+			max-width: 302px
+			display: flex
+			flex-wrap: wrap
+			gap:70px
+
+			>img
+				display:block
+				margin: 0 auto
+				width: 48%
+				flex-basis: 80px
 
 // как в уроке
 // #advantages

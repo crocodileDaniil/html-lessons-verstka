@@ -21,6 +21,6 @@ $(function () {
 		$(".rew_inner > .item_rev").not(revId).removeClass('active')
 		$(revId).addClass('active')
 
-    console.log(revId);
+    // console.log(revId);
   });
 });
