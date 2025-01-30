@@ -501,6 +501,8 @@ section
 				display: flex
 				flex-direction: column
 				gap:16px
+				>a
+					margin: 0 auto
 				>.line
 					height: 1px
 					background-color: #8989A2
@@ -529,8 +531,118 @@ section
 				&:focus
 					border-color: $accent
 			>a
-				max-width: 200px
+				text-align: center
+				>img
+					max-width: 200px
 			
+#footer
+	background-size: cover
+	background-position: center
+	background-repeat: no-repeat
+	background-image: url('../src/img/footer/bg-footer.svg')
+	.footer-content
+		display: flex
+		gap:40px
+		padding: 58px 0px
+		flex-wrap: nowrap
+		>div
+			padding: 0
+		b.heading
+			color: $dark_accent
+			margin-bottom: 20px
+			display: block
+			font-size: 18px
+			font-weight: 700
+	.logo_info
+		max-width: 210px 
+		padding: 0
+		>a
+			width:48px
+			height:48px
+			display: block
+			margin-bottom: 14px
+		>.descr
+			// font-family: $default-font
+			font-size: 14px
+			font-weight: 500
+			color: $dark_accent
+			margin-bottom: 24px
+		>.social
+			display: flex
+			gap:10px
+			>li
+				list-style-type: none
+				display: inline-block
+				>a
+					text-decoration: none
+					display: flex
+					justify-content: center
+					align-items: center
+					width: 16px
+					height: 16px
+					transition: transform 0.2s ease
+					&:hover
+						transform: scale(1.2) translateY(-3px)
+	.mnu_footer_wrapper
+		display: flex
+		gap: 40px
+		>.mnu_footer
+			width: 23%
+			>ul
+				>li
+					display: block
+					>a
+						padding-bottom: 10px
+						display: block
+						text-decoration: none
+						font-weight: 400
+						color: $dark_accent
+						transition: color 0.2s ease
+						&:hover
+							color: $accent
+	.newsletter
+		>form
+			position: relative
+			display: flex
+			align-items: center
+			background-color: #fff
+			box-shadow: 0 5px 9px rgba(0,0 , 0, 0.051)
+			>input
+				display: block
+				border: none
+				padding: 12px 6px
+				&::placeholder
+					font-size: 14px
+					color: $gray_accent
+			>button
+				border: none
+				background-color: transparent
+				outline: none
+				width: 20px
+				height: 20px
+				position: absolute
+				right: 6px
+				cursor: pointer
+				transition: all 0.2s ease
+				&:hover
+					transform: scale(1.2) translateY(-2px)
+				>img
+					width: 20px
+					height: 20px
+	.copyright
+		display: flex
+		justify-content: center
+		align-items: center
+		gap: 8px
+		padding: 20px
+		>p
+			font-size: 16px
+			font-weight: 900
+			color: $dark_accent
+		
+
+
+
 
 .btn_form
 	text-decoration: none
