@@ -382,7 +382,7 @@ section
 			align-items: center
 			gap: 32px
 			display: none
-			animation: opac 1s
+			animation: opac 1.5s
 		.active
 			display: flex
 		.line 
@@ -578,11 +578,17 @@ section
 					display: flex
 					justify-content: center
 					align-items: center
+					padding-bottom: 10px
 					width: 16px
 					height: 16px
-					transition: transform 0.2s ease
-					&:hover
-						transform: scale(1.2) translateY(-3px)
+					// помогает чтобы не было дерганий
+					// при наведении стиль применяется на img, а не ссылку
+					// либо (см ниже в newlatter) увеличить scale
+					// и не делать большой отступ 		
+					img
+						transition: transform 0.2s ease
+					&:hover>img
+						transform: scale(1.2) translateY(-5px)
 	.mnu_footer_wrapper
 		display: flex
 		gap: 40px
@@ -626,6 +632,12 @@ section
 				transition: all 0.2s ease
 				&:hover
 					transform: scale(1.2) translateY(-2px)
+				// так можно сделать чтобы поднималось содержимое, 
+				// а не сам элемент, спасает от дёрганий
+				// >img
+				// 	transition: all 0.2s ease
+				// &:hover>img
+				// 	transform: scale(1.2) translateY(-2px)
 				>img
 					width: 20px
 					height: 20px
