@@ -26,4 +26,20 @@ $(function () {
 
     // console.log(revId);
   });
+
+  /* yakor */
+  $('a.yakor').on('click', function(e) {
+    let $anchor = $(this)
+    $('html, body').stop().animate({
+      scrollTop: $($anchor.attr('href')).offset().top - 57
+    }, {
+      duration: 2000,
+      specialEasing: {
+        width: 'linear',
+        height: 'easeInOutCibic'
+      }
+    })
+    e.preventDefault()
+  })
+  /* yakor */
 });
